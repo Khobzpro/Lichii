@@ -36,3 +36,10 @@ EDEN_NX2_FENCE_BATCH=1
 #EDEN_NX2_SPLIT_SKIP=1
 #EDEN_NX2_AUTO_STUB=1
 #EDEN_NX2_KEEP_ASTC=1
+# --- Shader stutter ---
+# Native graphics pipelines are translated on worker threads; a draw waits up to 3 ms for its
+# pipeline, then is skipped until it is ready. Set to 0 to translate on the GPU thread again
+# (try this first if a scene shows missing geometry or crashes).
+#EDEN_NX2_ASYNC_TRANSLATION=0
+# How long a draw waits for its pipeline, in ms (0 = never wait).
+#EDEN_NX2_ASYNC_TRANSLATION_WAIT_MS=3
